@@ -10,13 +10,13 @@ import { ICategory } from './../shared-classes-and-types/icategory';
 })
 export class ProductsComponent implements OnInit {
 
-  Discount!:DiscountOffers;
-  storeName!:string;
-  storeLogo!:string;
+  Discount!: DiscountOffers;
+  storeName!: string;
+  storeLogo!: string;
   ProductList!: IProduct[];
-  CategoryList!:ICategory[];
-  ClientName!:string;
-  IsPurshased!:boolean;
+  CategoryList!: ICategory[];
+  ClientName!: string;
+  IsPurshased!: boolean;
 
 
   constructor() {
@@ -25,15 +25,20 @@ export class ProductsComponent implements OnInit {
     // this.Discount;
     this.storeName = "Amazon";
     this.storeLogo = "https://img.icons8.com/color/48/000000/amazon.png";
-    this.ProductList = [{ID: 1, Name: "PC", Quantity: 25, Price: 500, Img: ""}];
-    this.CategoryList = [{ID: 1, Name: "Electronics" }]
+    this.ProductList = [{ ID: 1, Name: "PC", Quantity: 25, Price: 500, Img: "" }];
+    this.CategoryList = [
+      { ID: 1, Name: "Electronics" },
+      { ID: 2, Name: "Computers" }, 
+      { ID: 3, Name: "Smart home" },
+      { ID: 3, Name: "Arts & Crafts" }
+  ]
   }
 
-  fullName:string="Default value";
+  fullName: string = "Default value";
   ngOnInit(): void {
   }
 
-  logData(data:any){
+  logData(data: any) {
     console.log(data)
   }
 

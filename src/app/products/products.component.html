@@ -2,17 +2,14 @@
     <h1> {{storeName}} </h1>
     <img [src]="storeLogo" />
     <input type=" text" #txtName [(ngModel)]="ProductList[0].Name">
-    <h3> {{ProductList[0].Name}} </h3>
+    <!-- <h3> {{ProductList[0].Name}} </h3> -->
     <button (click)="logData(txtName.value)">Click </button>
 
-    <!-- First way to hide h3 -->
-    <!-- <div *ngIf="Discount != 'No Discount' then displaySale;"> -->
-    <!-- </div> -->
-    <!-- <ng-template #displaySale> -->
-    <!-- <h3> {{"We offer an explicit discount of: " + Discount}} </h3> -->
-    <!-- </ng-template> -->
-
-    <!-- Second way to hide h3 -->
+    <!-- Day2.q1 => hide h3 -->
     <h3 *ngIf="Discount != 'No Discount'"> {{"We offer an explicit discount of: " + Discount}} </h3>
 
+    <!-- Day2.q2 => Make a Dropdownlist for categories -->
+    <select>
+        <option *ngFor="let category of CategoryList"> {{category.Name}} </option>
+    </select>
 </div>
