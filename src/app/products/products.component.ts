@@ -21,13 +21,19 @@ export class ProductsComponent implements OnInit {
 
   constructor() {
     this.Discount = DiscountOffers["ten"];
-    this.storeName = "eBay";
-    this.storeLogo = "https://img.icons8.com/color/48/000000/ebay.png";
+    // this.Discount;
+    this.storeName = "Amazon";
+    this.storeLogo = "https://img.icons8.com/color/48/000000/amazon.png";
     this.ProductList = [{ID: 1, Name: "PC", Quantity: 25, Price: 500, Img: ""}];
     this.CategoryList = [{ID: 1, Name: "Electronics" }]
   }
 
+  fullName:string="Default value";
   ngOnInit(): void {
+  }
+
+  logData(data:any){
+    console.log(data)
   }
 
 }

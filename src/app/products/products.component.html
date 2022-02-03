@@ -1,7 +1,14 @@
 <div class="products">
     <h1> {{storeName}} </h1>
     <img [src]="storeLogo" />
-    <h3 *ngIf="Discount"> {{"We offer an explicit discount of: " + Discount}} </h3>
+    <input type=" text" #txtName [(ngModel)]="ProductList[0].Name">
+    <h3> {{ProductList[0].Name}} </h3>
+    <button (click)="logData(txtName.value)">Click </button>
 
-    <!-- "We offer an explicit discount of: " +  -->
+    <div *ngIf="Discount ; then displayOffer; "> </div>
+    <ng-template #displayOffer>
+        <!-- <h3 *ngIf=" Discount"> {{"We offer an explicit discount of: " + Discount}} </h3> -->
+        <h3> {{"We offer an explicit discount of: " + Discount}} </h3>
+    </ng-template>
+
 </div>
