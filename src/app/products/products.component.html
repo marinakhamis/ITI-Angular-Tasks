@@ -12,4 +12,30 @@
     <select>
         <option *ngFor="let category of CategoryList"> {{category.Name}} </option>
     </select>
+
+    <!-- Day2.q3 => Make a table for productList -->
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Price</th>
+                <th scope="col">Img</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of ProductList">
+                <td> {{product.ID}}</td>
+                <td> {{product.Name}}</td>
+                <td> {{product.Price}}</td>
+                <td> {{product.Quantity}}</td>
+                <td> <img class="td-img" src={{product.Img}} /></td>
+
+            </tr>
+
+        </tbody>
+    </table>
+
+
 </div>
