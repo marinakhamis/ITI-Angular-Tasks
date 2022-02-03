@@ -12,26 +12,30 @@
     </select>
 
     <!-- Day2.q3 => Make a table for productList -->
-    <table class="table">
-        <thead class="thead-dark">
-            <tr>
-                <th scope="col">ID</th>
-                <th scope="col">Name</th>
-                <th scope="col">Quantity</th>
-                <th scope="col">Price</th>
-                <th scope="col">Img</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let product of ProductList">
-                <td> {{product.ID}}</td>
-                <td> {{product.Name}}</td>
-                <td> {{product.Price}}</td>
-                <td> {{product.Quantity}}</td>
-                <td> <img class="td-img" src={{product.Img}} /></td>
-            </tr>
-        </tbody>
-    </table>
+    <ng-template #productTable>
+
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Img</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let product of ProductList">
+                    <td> {{product.ID}}</td>
+                    <td> {{product.Name}}</td>
+                    <td> {{product.Price}}</td>
+                    <td> {{product.Quantity}}</td>
+                    <td> <img class="td-img" src={{product.Img}} /></td>
+                </tr>
+            </tbody>
+        </table>
+    </ng-template>
+
 </div>
 
 <!-- Day2.q4 two-way binding for ClientName-->
@@ -40,3 +44,13 @@
     <input type="text" [(ngModel)]="ClientName" placeholder="Enter your name">
 </label>
 <h3> {{ClientName}} </h3>
+
+
+<!-- Day2.q5 Event binding for IsPurshased-->
+
+<button (click)="buyProduct()" class="btn btn-warning">
+    Buy now
+</button>
+<div *ngIf="IsPurchased; else productTable;">
+    {{"Thanks for purchasing from our Store, " + ClientName}}
+</div>

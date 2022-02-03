@@ -16,7 +16,7 @@ export class ProductsComponent implements OnInit {
   ProductList!: IProduct[];
   CategoryList!: ICategory[];
   ClientName!: string;
-  IsPurshased!: boolean;
+  IsPurchased!: boolean;
 
 
   constructor() {
@@ -37,15 +37,19 @@ export class ProductsComponent implements OnInit {
       { ID: 3, Name: "Smart home" },
       { ID: 3, Name: "Arts & Crafts" }
     ];
-    this.ClientName;
+    this.ClientName= "Marina";
+    this.IsPurchased = false;
   }
 
-  fullName: string = "Default value";
   ngOnInit(): void {
   }
 
-  logData(data: any) {
-    console.log(data)
+  buyProduct(){
+    //Without toggeling
+   // this.IsPurchased = true;
+
+   // With toggling
+   this.IsPurchased = !this.IsPurchased;
   }
 
 }
