@@ -1,10 +1,13 @@
 <div class="products">
     <span> <img [src]="storeLogo" />
-        <b> {{storeName}} </b>
+        <!-- Day2.q6  => storeName pipe -->
+        {{storeName | uppercase}}
     </span>
 
     <!-- Day2.q1 => hide h3 -->
-    <h3 *ngIf="Discount != 'No Discount'"> {{"We offer an explicit discount of: " + Discount}} </h3>
+
+    <!-- "We offer an explicit discount of: " +  -->
+    <h3 *ngIf="Discount != 'No Discount'"> We offer an explicit discount of: {{ Discount / 100 | percent}} </h3>
 
     <!-- Day2.q2 => Make a Dropdownlist for categories -->
     <select>
