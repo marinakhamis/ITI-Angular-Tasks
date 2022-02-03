@@ -36,7 +36,8 @@ export class ProductsComponent implements OnInit {
       { ID: 2, Name: "Computers" },
       { ID: 3, Name: "Smart home" },
       { ID: 3, Name: "Arts & Crafts" }
-    ]
+    ];
+    this.ClientName;
   }
 
   fullName: string = "Default value";

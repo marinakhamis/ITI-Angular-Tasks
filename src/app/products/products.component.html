@@ -1,9 +1,7 @@
 <div class="products">
-    <h1> {{storeName}} </h1>
-    <img [src]="storeLogo" />
-    <input type=" text" #txtName [(ngModel)]="ProductList[0].Name">
-    <!-- <h3> {{ProductList[0].Name}} </h3> -->
-    <button (click)="logData(txtName.value)">Click </button>
+    <span> <img [src]="storeLogo" />
+        <b> {{storeName}} </b>
+    </span>
 
     <!-- Day2.q1 => hide h3 -->
     <h3 *ngIf="Discount != 'No Discount'"> {{"We offer an explicit discount of: " + Discount}} </h3>
@@ -31,11 +29,14 @@
                 <td> {{product.Price}}</td>
                 <td> {{product.Quantity}}</td>
                 <td> <img class="td-img" src={{product.Img}} /></td>
-
             </tr>
-
         </tbody>
     </table>
-
-
 </div>
+
+<!-- Day2.q4 two-way binding for ClientName-->
+<label>
+    Name:
+    <input type="text" [(ngModel)]="ClientName" placeholder="Enter your name">
+</label>
+<h3> {{ClientName}} </h3>
