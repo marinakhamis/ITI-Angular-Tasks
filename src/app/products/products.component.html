@@ -5,10 +5,14 @@
     <h3> {{ProductList[0].Name}} </h3>
     <button (click)="logData(txtName.value)">Click </button>
 
-    <div *ngIf="Discount ; then displayOffer; "> </div>
-    <ng-template #displayOffer>
-        <!-- <h3 *ngIf=" Discount"> {{"We offer an explicit discount of: " + Discount}} </h3> -->
-        <h3> {{"We offer an explicit discount of: " + Discount}} </h3>
-    </ng-template>
+    <!-- First way to hide h3 -->
+    <!-- <div *ngIf="Discount != 'No Discount' then displaySale;"> -->
+    <!-- </div> -->
+    <!-- <ng-template #displaySale> -->
+    <!-- <h3> {{"We offer an explicit discount of: " + Discount}} </h3> -->
+    <!-- </ng-template> -->
+
+    <!-- Second way to hide h3 -->
+    <h3 *ngIf="Discount != 'No Discount'"> {{"We offer an explicit discount of: " + Discount}} </h3>
 
 </div>

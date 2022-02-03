@@ -20,7 +20,8 @@ export class ProductsComponent implements OnInit {
 
 
   constructor() {
-    this.Discount = DiscountOffers["ten"];
+    this.Discount = DiscountOffers.ten; // Diplays the Sale div
+    // this.Discount = DiscountOffers.NoDiscount; // Hides the sale div
     // this.Discount;
     this.storeName = "Amazon";
     this.storeLogo = "https://img.icons8.com/color/48/000000/amazon.png";
