@@ -7,7 +7,7 @@ import { IProduct } from '../shared-classes-and-types/iproducts';
 })
 
 export class ProductServiceService {
-  // constructor() { }
+
     getAllProducts(): IProduct[]{
       return [
         { ID: 1, Name: "PC", Quantity: 3000, Price: 5000, Img: "https://img.icons8.com/external-xnimrodx-lineal-color-xnimrodx/64/000000/external-pc-computer-xnimrodx-lineal-color-xnimrodx.png" },

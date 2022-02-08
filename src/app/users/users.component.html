@@ -1,0 +1,11 @@
+<div class="d-flex flex-wrap justify-content-evenly">
+    <div *ngFor="let user of usersList" class="card bg-light" style="width: 18rem; margin:5px;">
+        <div class="card-header">{{user.id}}. {{user.username}}</div>
+        <div class="card-body">
+            <h5 class="card-title">{{user.name}}</h5>
+            <p class="card-text">Phone: {{user.phone}}</p>
+        </div>
+    </div>
+</div>
+
+{{errorMsg}}

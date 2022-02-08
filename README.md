@@ -26,32 +26,27 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
-## Lab assignments:
+# lab_assignments
 
-1- Make a folder name it services.
+1-In your project in the header
 
-2- Make a service name it ProductService inside services folder then add two functions inside it
+- make a navigation items (home , products , users , posts) ✅
+- home page must navigate to the home page ✅
+- products page must navigate to the products page that contain list of products ✅
+- users page contain list of user in cards (name,username,email) from the api https://jsonplaceholder.typicode.com/users ✅
+- posts contain list of posts in cards (id,title,body) from the following service https://jsonplaceholder.typicode.com/posts ✅
 
-- a. GetAllProducts() that return all the products
-- b. GetProductById(prdId) that return the product with the specified id that passed as parameter.
-  With the following validatations
+## notes:
 
-  - If there is no product with the specified id return null;
-  - If the data that are passsed not number return null;
-
-3- In your app componemt include the product component you made before so that the product component become child
-in the app component.
-
-4- In the product component make a method name it renderValues() inside this function make a call to the ProductService functions getAllProducts()
-and intialize the returned value to your properties.
-
-5- In the app component make a button display data when click on it will call the renderValues method of the child. (viewchild)
-
-note :- in this logic you may use ngIf structural directive to make the table f products hidden first then when click on the button from parent make its value changes
+- header and footer must be in all pages ✅
+- you must use bootstrap ✅
+- you must use complex types in castiong with observer (IPost , IUser) ✅
+- you must handle errors in http ✅
+- you must make calling of http in services ✅
 
 ## bouns:-
 
-Search for subject behaviour service.
--what it do?
-
-- make a demo about it (big bouns)
+    - in the posts component make a button view post comments if clicked on it redirect to comments page with the
+      post id and render the related comments of this post from the following service
+      https://jsonplaceholder.typicode.com/posts/1/comments
+      the previous called the api with the id is 1 of the post

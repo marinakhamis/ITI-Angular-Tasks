@@ -9,11 +9,11 @@ import { ProductsComponent } from '../app/products/products.component';
 export class AppComponent {
   title = 'Amazon';
   @ViewChild(ProductsComponent) child!: ProductsComponent;
-  showProducts(){
+  showProducts() {
     this.child.renderValues();
   }
 
-  toggleProducts(){
+  toggleProducts() {
     this.child.buyProduct();
   }
 }

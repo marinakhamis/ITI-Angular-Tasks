@@ -1,0 +1,9 @@
+<div class="d-flex flex-wrap justify-content-evenly">
+    <div *ngFor="let post of postsList" class="card bg-light" style="width: 18rem; margin:5px;">
+        <div class="card-header">{{post.id}}. {{post.title}}</div>
+        <div class="card-body">
+            <h5 class="card-title">{{post.body}}</h5>
+        </div>
+    </div>
+</div>
+{{errorMsg}}
