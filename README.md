@@ -25,28 +25,36 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+lab_assignments
 
-# lab_assignments
+---
 
-1-In your project in the header
+# Lab 5
 
-- make a navigation items (home , products , users , posts) ✅
-- home page must navigate to the home page ✅
-- products page must navigate to the products page that contain list of products ✅
-- users page contain list of user in cards (name,username,email) from the api https://jsonplaceholder.typicode.com/users ✅
-- posts contain list of posts in cards (id,title,body) from the following service https://jsonplaceholder.typicode.com/posts ✅
+1- in your product page make two buttons
 
-## notes:
+- (Products with discount and product without discounts)
+- if you click in any button of them you must navigate to it in the same product page
 
-- header and footer must be in all pages ✅
-- you must use bootstrap ✅
-- you must use complex types in castiong with observer (IPost , IUser) ✅
-- you must handle errors in http ✅
-- you must make calling of http in services ✅
+2- In your header make a two links register and login
+register will open register form with the following fields
+
+- ussr name
+- email
+- password
+- confirm password
+- wher you hear about us as drop down list contains (facebook -twitter , google)
+- register button
+
+login will open login form with the following fields
+-email
+
+- password
+- login button
+  date created
 
 ## bouns:-
 
-    - in the posts component make a button view post comments if clicked on it redirect to comments page with the
-      post id and render the related comments of this post from the following service
-      https://jsonplaceholder.typicode.com/posts/1/comments
-      the previous called the api with the id is 1 of the post
+in your page if you click in any comment button in post you must navigate to this comments related to the post
+we need to make button in the comments page if we click on it it navigated to agin to the post page but make the post
+we are naviagted fom it with any different style
