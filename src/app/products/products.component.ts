@@ -10,7 +10,6 @@ import {ProductServiceService} from '../Services/product-service.service';
   styleUrls: ['./products.component.scss']
 })
 export class ProductsComponent implements OnInit {
-
   Discount!: DiscountOffers;
   storeName!: string;
   storeLogo!: string;
