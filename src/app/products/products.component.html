@@ -47,7 +47,6 @@
 </label>
 <h3> {{ClientName}} </h3>
 
-
 <!-- Day2.q5 Event binding for IsPurshased-->
 
 <button (click)="buyProduct()" class="btn btn-warning">
@@ -56,3 +55,9 @@
 <div *ngIf="IsPurchased; else productTable;">
     {{"Thanks for purchasing from our Store, " + ClientName}}
 </div>
+
+
+<button class="btn btn-success" (click)="discountProd()"> Products with Discount </button>
+<button class="btn btn-warning" (click)="noDiscountProd()"> Products without Discount </button>
+
+<router-outlet></router-outlet>

@@ -3,6 +3,7 @@ import { DiscountOffers } from '../shared-classes-and-types/discount-offers';
 import { IProduct } from './../shared-classes-and-types/iproducts';
 import { ICategory } from './../shared-classes-and-types/icategory';
 import {ProductServiceService} from '../Services/product-service.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-products',
@@ -19,7 +20,7 @@ export class ProductsComponent implements OnInit {
   IsPurchased!: boolean;
 
 
-  constructor(public productService: ProductServiceService) {
+  constructor(public productService: ProductServiceService, private router:Router,private activatedRoute: ActivatedRoute) {
     this.productService = productService;
     this.ProductList = this.renderValues();
     this.Discount = DiscountOffers.ten; // Diplays the Sale div
@@ -33,6 +34,13 @@ export class ProductsComponent implements OnInit {
     ];
     this.ClientName= "Marina";
     this.IsPurchased = false;
+  }
+  discountProd(){
+    this.router.navigate(['discount-products'],{relativeTo:this.activatedRoute})
+  }
+
+  noDiscountProd(){
+    this.router.navigate(['no-discount-products'],{relativeTo:this.activatedRoute})
   }
 
   ngOnInit(): void {
