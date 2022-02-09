@@ -12,7 +12,10 @@ import { HomeComponent } from './home/home.component';
 import { UsersComponent } from './users/users.component';
 import { PostsComponent } from './posts/posts.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { PostCommentsComponent } from './post-comments/post-comments.component';
+import { DiscountProductsComponent } from './products/discount-products/discount-products.component';
+import { NoDiscountProductsComponent } from './products/no-discount-products/no-discount-products.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,10 @@ import { PostCommentsComponent } from './post-comments/post-comments.component';
     UsersComponent,
     PostsComponent,
     PageNotFoundComponent,
-    PostCommentsComponent
+    DiscountProductsComponent,
+    NoDiscountProductsComponent,
+    LoginComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,

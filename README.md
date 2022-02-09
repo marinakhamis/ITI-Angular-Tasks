@@ -34,12 +34,13 @@ lab_assignments
 1- in your product page make two buttons
 
 - (Products with discount and product without discounts)
+
 - if you click in any button of them you must navigate to it in the same product page
 
 2- In your header make a two links register and login
 register will open register form with the following fields
 
-- ussr name
+- user name
 - email
 - password
 - confirm password
