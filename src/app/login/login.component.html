@@ -1,13 +1,17 @@
-<form class="container" #login="ngForm" novalidate (ngSubmit)="onSumbit()" name="form">
-    <br>
+<!-- <form class="container" #login="ngForm" novalidate (ngSubmit)="onSumbit()" name="form"> -->
+<form #login="ngForm" [formGroup]="loginModel">
+    <!-- <br> -->
     {{login.value | json}}
     <br>
     {{loginModel.password | json}}
     <div class="form-group">
         <label for="exampleInputEmail1">Email address</label>
-        <input pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" [(ngModel)]="loginModel.email" name="email"
-            type="email" #email="ngModel" class="form-control" [class.is-invalid]="email.invalid && email.touched"
-            id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
+        <!-- <input pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" [(ngModel)]="loginModel.email" name="email" -->
+        <!-- type="email" #email="ngModel" class="form-control" [class.is-invalid]="email.invalid && email.touched" -->
+        <!-- id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required> -->
+
+        <input type="email" class="form-control" formControlName="email"
+            [class.invalid]="email?.invalid&& email?.touched" />
         <small id="emailHelp" class="form-text text-danger" [class.d-none]="email.valid || email.untouched">Email is
             invalid</small>
     </div>

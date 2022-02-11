@@ -29,32 +29,17 @@ lab_assignments
 
 ---
 
-# Lab 6
+# Lab 7
 
-## lab_assignments
+## Lab Assignments:-
 
-1- in the previous lab assignments according to the two forms
-
-- make all fileds requierd.
-- provide visulal feedback for all validations.
-- display error message for every validation.
-- the user name must also contains only capital and smal characters.
-- email inoput must contains @ and . in the format (aaa@bb.com)
-- display error message for each kond of validations
-- make form level validation by making the button disabled
-- and when the form is not valid its color become red
-- and when valid its color become green and become active.
-- for the where you here about us must make it required and the first value become -----please select option-----
-
-2- Make a server and in your server intialize its dependancies and make api called
-register to register the user and save the object in local storage of array of users
-
-3- make method login in the server to take the username and password and check in the localstorage if found
-return welcome \_+username
-
-## bouns:
-
-try to make validation to the confirm password to be the same as password
-note:- use template drivin form logic not reactive forms
-
-you may make logic in ts.
+- In your register and logn form redo all the validations using Reactive forms.
+- Make custom validation to the confirm password to be equal to oassword.
+- Make a page called notes:
+  - in this page make a form contains the following filds
+  - Name whic is required and not allow to be admin or adminstrator.
+  - Drop down to select product you want.
+  - Check box (Does this product containd discount).
+    if checkbox checked then a number input appears which is required
+    (write discount value in percent).
+  - Add another comment button when cliked add another comment.

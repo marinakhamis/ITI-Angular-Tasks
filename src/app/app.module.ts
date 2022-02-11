@@ -17,6 +17,7 @@ import { NoDiscountProductsComponent } from './products/no-discount-products/no-
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     NoDiscountProductsComponent,
     LoginComponent,
     RegisterComponent,
+    ReactiveFormsComponent,
   ],
   imports: [
     BrowserModule,
