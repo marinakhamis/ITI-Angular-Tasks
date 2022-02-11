@@ -8,7 +8,7 @@ import { LoginData } from './../shared-classes/login-data';
 export class EnrollService {
 
   constructor(private http:HttpClient) { }
-  _url="";
+  _url="http://localhost:3000/enroll";
   enroll(data:LoginData){
     return this.http.post(this._url,data)
   }

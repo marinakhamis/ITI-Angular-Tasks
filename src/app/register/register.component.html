@@ -46,7 +46,6 @@
                                 </div>
 
                                 <div class="col-md-6 mb-4">
-
                                     <div class="form-outline">
                                         <input pattern="[A-Za-z]{3,}" [(ngModel)]="registerModel.password"
                                             [class.is-invalid]="password.invalid && password.touched" name="password"
@@ -54,21 +53,15 @@
                                             placeholder="Password" #password="ngModel" required>
                                         <label class="form-label" for="password">Password</label>
                                         <br>
-
-
                                         <div *ngIf="password.errors &&  password.touched">
                                             <small class="text-danger" *ngIf="password.errors['required']">password is
                                                 required</small>
                                             <small class="text-danger" *ngIf="password.errors['pattern']">password is
                                                 invalid</small>
                                         </div>
-
                                     </div>
-
                                 </div>
-
                                 <div class="col-md-6 mb-4">
-
                                     <div class="form-outline">
                                         <input pattern="[A-Za-z]{3,}" [(ngModel)]="registerModel.password"
                                             [class.is-invalid]="password.invalid && password.touched" name="cpassword"
@@ -83,13 +76,10 @@
                                                 invalid</small>
                                         </div>
                                     </div>
-
                                 </div>
                             </div>
-
                             <div class="row">
                                 <div class="col-md-6 mb-4 d-flex align-items-center">
-
                                     <div class="form-outline datepicker w-100">
                                         <input pattern="\d{1,2}/\d{1,2}/\d{4}" [(ngModel)]="registerModel.bday"
                                             [class.is-invalid]="bday.invalid && bday.touched" name="bday" type="text"
