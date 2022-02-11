@@ -5,22 +5,42 @@
                 <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
                     <div class="card-body p-4 p-md-5">
                         <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Registration Form</h3>
-                        <form>
-
+                        <form #register="ngForm" novalidate>
                             <div class="row">
                                 <div class="col-md-6 mb-4">
-
                                     <div class="form-outline">
-                                        <input type="text" id="username" class="form-control form-control-lg" />
+                                        <input pattern="[A-Za-z]{3,}" [(ngModel)]="registerModel.uname" #uname="ngModel"
+                                            [class.is-invalid]="uname.invalid && uname.touched" type="text"
+                                            id="username" class="form-control form-control-lg" required />
                                         <label class="form-label" for="username">Username</label>
+                                        <br>
+                                        <div *ngIf="uname.errors &&  uname.touched">
+                                            <small class="text-danger" *ngIf="uname.errors['required']">name is
+                                                required</small>
+                                            <small class="text-danger" *ngIf="uname.errors['pattern']">name is
+                                                invalid</small>
+                                        </div>
+
                                     </div>
 
                                 </div>
                                 <div class="col-md-6 mb-4">
 
                                     <div class="form-outline">
-                                        <input type="email" id="email" class="form-control form-control-lg" />
+                                        <input pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                                            [(ngModel)]="registerModel.email" name="email" type="email" #email="ngModel"
+                                            class="form-control" [class.is-invalid]="email.invalid && email.touched"
+                                            type="email" id="email" class="form-control form-control-lg" required />
                                         <label class="form-label" for="email">Email</label>
+                                        <br>
+                                        <div *ngIf="email.errors &&  email.touched">
+                                            <small class="text-danger" *ngIf="email.errors['required']">email number is
+                                                required</small>
+                                            <small class="text-danger" *ngIf="email.errors['pattern']">email is
+                                                invalid</small>
+                                            {{email.errors|json}}
+                                        </div>
+
                                     </div>
 
                                 </div>
@@ -28,8 +48,21 @@
                                 <div class="col-md-6 mb-4">
 
                                     <div class="form-outline">
-                                        <input type="password" id="password" class="form-control form-control-lg" />
+                                        <input pattern="[A-Za-z]{3,}" [(ngModel)]="registerModel.password"
+                                            [class.is-invalid]="password.invalid && password.touched" name="password"
+                                            type="password" class="form-control" id="exampleInputPassword1"
+                                            placeholder="Password" #password="ngModel" required>
                                         <label class="form-label" for="password">Password</label>
+                                        <br>
+
+
+                                        <div *ngIf="password.errors &&  password.touched">
+                                            <small class="text-danger" *ngIf="password.errors['required']">password is
+                                                required</small>
+                                            <small class="text-danger" *ngIf="password.errors['pattern']">password is
+                                                invalid</small>
+                                        </div>
+
                                     </div>
 
                                 </div>
@@ -37,9 +70,18 @@
                                 <div class="col-md-6 mb-4">
 
                                     <div class="form-outline">
-                                        <input type="password" id="confirm-password"
-                                            class="form-control form-control-lg" />
+                                        <input pattern="[A-Za-z]{3,}" [(ngModel)]="registerModel.password"
+                                            [class.is-invalid]="password.invalid && password.touched" name="cpassword"
+                                            type="password" class="form-control" id="exampleInputPassword1"
+                                            placeholder="Password" #cpassword="ngModel" required>
                                         <label class="form-label" for="confirm-password">Confirm password</label>
+                                        <br>
+                                        <div *ngIf="cpassword.errors &&  cpassword.touched">
+                                            <small class="text-danger" *ngIf="cpassword.errors['required']">password is
+                                                required</small>
+                                            <small class="text-danger" *ngIf="cpassword.errors['pattern']">password is
+                                                invalid</small>
+                                        </div>
                                     </div>
 
                                 </div>
@@ -49,32 +91,36 @@
                                 <div class="col-md-6 mb-4 d-flex align-items-center">
 
                                     <div class="form-outline datepicker w-100">
-                                        <input type="text" class="form-control form-control-lg" id="birthdayDate" />
+                                        <input pattern="\d{1,2}/\d{1,2}/\d{4}" [(ngModel)]="registerModel.bday"
+                                            [class.is-invalid]="bday.invalid && bday.touched" name="bday" type="text"
+                                            class="form-control" id="exampleInputbday1" placeholder="bday"
+                                            #bday="ngModel" required>
                                         <label for="birthdayDate" class="form-label">Birthday</label>
+                                        <br>
+
+                                        <div *ngIf="bday.errors && bday.touched">
+                                            <small class="text-danger" *ngIf="bday.errors['required']">Birthday is
+                                                required</small>
+                                            <small class="text-danger" *ngIf="bday.errors['pattern']">Birthday is
+                                                invalid</small>
+                                        </div>
                                     </div>
-
                                 </div>
-
                             </div>
-
                             <div class="row">
                                 <div class="col-12">
-
-                                    <select class="select form-control-lg">
+                                    <select class="select form-control-lg" required>
                                         <option value="1" disabled>Choose option</option>
                                         <option value="2">Facebook</option>
                                         <option value="3">Twitter</option>
                                         <option value="4">Google</option>
                                     </select>
                                     <label class="form-label select-label">How did you hear about us</label>
-
                                 </div>
                             </div>
-
                             <div class="mt-4 pt-2">
                                 <input class="btn btn-primary btn-lg" type="submit" value="Submit" />
                             </div>
-
                         </form>
                     </div>
                 </div>

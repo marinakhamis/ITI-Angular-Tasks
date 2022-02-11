@@ -1,17 +1,21 @@
-<form class="container">
+<form class="container" #login="ngForm" novalidate (ngSubmit)="onSumbit()">
+    <br>
+    {{login.value | json}}
+    <br>
+    {{loginModel.password | json}}
     <div class="form-group">
         <label for="exampleInputEmail1">Email address</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-            placeholder="Enter email">
-        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        <input pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" [(ngModel)]="loginModel.email" name="email"
+            type="email" #email="ngModel" class="form-control" [class.is-invalid]="email.invalid && email.touched"
+            id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
+        <small id="emailHelp" class="form-text text-danger" [class.d-none]="email.valid || email.untouched">Email is
+            invalid</small>
     </div>
     <div class="form-group">
         <label for="exampleInputPassword1">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-    </div>
-    <div class="form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        <input pattern="[A-Za-z]{3,}" [(ngModel)]="loginModel.password"
+            [class.is-invalid]="password.invalid && password.touched" name="password" type="password"
+            class="form-control" id="exampleInputPassword1" placeholder="Password" #password="ngModel" required>
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>

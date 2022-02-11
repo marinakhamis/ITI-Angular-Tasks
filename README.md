@@ -29,33 +29,32 @@ lab_assignments
 
 ---
 
-# Lab 5
+# Lab 6
 
-1- in your product page make two buttons
+## lab_assignments
 
-- (Products with discount and product without discounts)
+1- in the previous lab assignments according to the two forms
 
-- if you click in any button of them you must navigate to it in the same product page
+- make all fileds requierd.
+- provide visulal feedback for all validations.
+- display error message for every validation.
+- the user name must also contains only capital and smal characters.
+- email inoput must contains @ and . in the format (aaa@bb.com)
+- display error message for each kond of validations
+- make form level validation by making the button disabled
+- and when the form is not valid its color become red
+- and when valid its color become green and become active.
+- for the where you here about us must make it required and the first value become -----please select option-----
 
-2- In your header make a two links register and login
-register will open register form with the following fields
+2- Make a server and in your server intialize its dependancies and make api called
+register to register the user and save the object in local storage of array of users
 
-- user name
-- email
-- password
-- confirm password
-- wher you hear about us as drop down list contains (facebook -twitter , google)
-- register button
+3- make method login in the server to take the username and password and check in the localstorage if found
+return welcome \_+username
 
-login will open login form with the following fields
--email
+## bouns:
 
-- password
-- login button
-  date created
+try to make validation to the confirm password to be the same as password
+note:- use template drivin form logic not reactive forms
 
-## bouns:-
-
-in your page if you click in any comment button in post you must navigate to this comments related to the post
-we need to make button in the comments page if we click on it it navigated to agin to the post page but make the post
-we are naviagted fom it with any different style
+you may make logic in ts.
